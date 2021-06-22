@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+html {
+    background-color: rgb(255, 255, 255);
+    color: rgb(39, 22, 1);
+    font-size: 16px;
+}
+ 
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2em 0;
+    align-items: center;
+}
+
+.header {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    margin-bottom: 1%;
+}
+
+.spinner {
+    font-size: 0.8em;
+    animation-name: rotation;
+    animation-duration: 4s;
+    opacity: 1;
+}
+
+@keyframes rotation {
+    from {transform: rotate(0deg); opacity: 0;}
+    to {transform: rotate(720deg); opacity: 1;}
+}
+  
+img {
+    height: 130px;
+    width: auto;
+    border-radius: 4%;
+    margin-left:auto;
+    margin-right: auto;
+    filter: grayscale(100%);
+}
+
+ul {
+    padding-left: 3em;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+}
+
+.left_column {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 3%;
+    align-items: center;
+}
+
+.right_column {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.section_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.parts_title {
+    justify-content: center;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+.icon_circle {
+    font-size: 0.37em;
+    margin: 2% 2%;
+}
+
+.person_description {
+    display: flex;
+    color: rgb(39, 22, 1);
+    font-size: 1em;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8%;
+}
+
+.grey {
+    color: grey;
+}
+
+.icon_profile {
+    font-size: 0.9em;
+    margin: 2em 1.7em;
+}
+
+.parts_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line_description {
+    text-align: center;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+    padding-left: 1.5em;
+    border-left: solid 2px  rgba(39, 22, 1, 0.555);
+}
+
+.education_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.degree {
+    display: flex;
+    margin-left: 2em;
+}
+
+.job_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.job_city {
+    font-size: 0.8em;
+    text-align: end;
+}
+
+.job_name {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.job_date {
+    font-size: 0.9em;
+}
+
+.description {
+    margin: 0.5em 0;
+}
+
+.education_list {
+    margin-bottom: 0;
+}
+
+
+@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+    html {
+        font-size: 14px;
+    }
+}
+  
+@media only screen and (min-width: 750px) and (max-width: 1300px) {
+    html {
+        font-size: 13px;
+    }
+}
+  
+@media only screen and (max-width: 750px) {
+    html {
+        font-size: 12px;
+    }
+    .columns {
+        flex-direction: column;
+        width: 95%;
+        align-items: center;
+    }
+    .subcolumns {
+        display: flex;
+        flex-direction: row;
+    }
+    .left_subcolumn, .right_subcolumn {
+        width: 50%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 0.5em;
+    }
+    .left_column, .right_column {
+        width: 100%;
+    }
+    .media {
+        font-size: 14px;
+    }
+    .main_text {
+        margin-left: 1em;
+    }
+    .icon_profile {
+        margin: 1.5em 0.7em;
+    }
+}
+
+@media print {
+    html {
+        font-size: 15px;
+    }
+    .columns {
+        width: 95%;
+    }
+    .left_column {
+        width: 30%;
+    }
+    .right_column {
+        width: 70%;
+    }
+    .description {
+        padding: auto;
+    }
+}
