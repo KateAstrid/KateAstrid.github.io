@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFan, faCircle, faUserAlt, faBriefcase, faUserGraduate } from "@fortawesome/free-solid-svg-icons";
 import './App.css';
 
 const Header = () => {
@@ -6,7 +8,7 @@ const Header = () => {
         <div className="header">
             <div>CATHERINE ASTRID</div>
             <div className="icon">
-                <i className='fas fa-fan spinner' />
+                <FontAwesomeIcon icon={faFan} className="spinner"/>
             </div>
         </div>
     )
@@ -15,9 +17,9 @@ const Header = () => {
 const LeftTitle = ({ title }) => {
     return (
         <div className="section_title parts_title">
-            <i class="fas fa-circle icon_circle"></i>
+            <FontAwesomeIcon icon={faCircle} className="icon_circle"/>
             <div>{title}</div>
-            <i class="fas fa-circle icon_circle"></i>
+            <FontAwesomeIcon icon={faCircle} className="icon_circle"/>
         </div>
     )
 };
@@ -94,7 +96,7 @@ const RightColumn = () => {
     return (
         <div className="right_column">
             <div className="section_title">
-                <i class="fas fa-user-alt icon_profile"></i>
+            <FontAwesomeIcon icon={faUserAlt} className="icon_profile"/>
                 <div>PROFILE</div>
             </div>
 
@@ -119,7 +121,7 @@ const RightColumn = () => {
             </div>
 
             <div className="section_title">
-                <i class="fas fa-briefcase icon_profile"></i>
+                <FontAwesomeIcon icon={faBriefcase} className="icon_profile"/>
                 <div>EMPLOYMENT HISTORY</div>
             </div>
 
@@ -163,7 +165,7 @@ const RightColumn = () => {
             </div>
 
             <div className="section_title">
-                <i class="fas fa-user-graduate icon_profile"></i>
+                <FontAwesomeIcon icon={faUserGraduate} className="icon_profile"/>
                 <div>EDUCATION</div>
             </div>
 
