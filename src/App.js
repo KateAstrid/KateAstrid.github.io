@@ -144,7 +144,7 @@ const RightColumn = () => {
                         <li>development and maintenance front end of two company sites - the first for legal entities, 
                             the second for individuals;</li> 
                         <li>helping with PHP back end;</li>
-                        <li>work with legacy code.</li> 
+                        <li>work with legacy code. </li> 
                     </ul>
                 </div>
 
