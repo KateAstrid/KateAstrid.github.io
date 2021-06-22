@@ -96,7 +96,7 @@ const RightColumn = () => {
     return (
         <div className="right_column">
             <div className="section_title">
-            <FontAwesomeIcon icon={faUserAlt} className="icon_profile"/>
+                <FontAwesomeIcon icon={faUserAlt} className="icon_profile"/>
                 <div>PROFILE</div>
             </div>
 
