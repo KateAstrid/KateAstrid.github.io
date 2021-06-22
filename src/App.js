@@ -128,7 +128,7 @@ const RightColumn = () => {
             <div className="main_text">
                 <div className="job_title">
                     <div className="job_name">Front end developer at "Opora" LLC</div>
-                    <div className="grey job_city">Moscow, Russia</div>
+                    <div className="grey job_city">Moscow, Russia</div> 
                 </div>
                 <div className="grey job_date">09.2020-12.2020</div>
                 <div className="description">"Opora" LLC is a leader in producing and selling medical equipment in Russia.</div>
