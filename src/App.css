@@ -41,6 +41,16 @@ html {
     from {transform: rotate(0deg); opacity: 0;}
     to {transform: rotate(720deg); opacity: 1;}
 }
+
+.icon_profile {
+    font-size: 0.9em;
+    margin: 2em 1.7em;
+}
+
+.icon_circle {
+    font-size: 0.37em;
+    margin: 1em 1em;
+}
   
 img {
     height: 130px;
@@ -90,11 +100,6 @@ ul {
     margin-top: 2em;
 }
 
-.icon_circle {
-    font-size: 0.37em;
-    margin: 2% 2%;
-}
-
 .person_description {
     display: flex;
     color: rgb(39, 22, 1);
@@ -106,11 +111,6 @@ ul {
 
 .grey {
     color: grey;
-}
-
-.icon_profile {
-    font-size: 0.9em;
-    margin: 2em 1.7em;
 }
 
 .parts_description {
@@ -151,6 +151,8 @@ ul {
 .job_city {
     font-size: 0.8em;
     text-align: end;
+    width: 12em;
+    min-width: 12em;
 }
 
 .job_name {
