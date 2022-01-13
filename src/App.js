@@ -6,7 +6,7 @@ import './App.css';
 const Header = () => {
     return (
         <div className="header">
-            <div>CATHERINE ASTRID</div>
+            <div>KATE ASTRID</div>
             <div className="icon">
                 <FontAwesomeIcon icon={faFan} className="spinner"/>
             </div>
