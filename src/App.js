@@ -185,7 +185,7 @@ const RightColumn = () => {
                     <div className="grey job_city">Amsterdam, the Netherlands</div>
                 </div>
                 <div className="grey job_date">07.2021-till now</div>
-                <div className="description">"Otravo" is a european travel organization. It owns owns a website
+                <div className="description">"Otravo" is a european travel organization. It owns a website
                     that is an aggregator of travel packages.</div>
                 <div className="description">
                     A few months before I joined the company, the entire front-end development team quit. Therefore, 
