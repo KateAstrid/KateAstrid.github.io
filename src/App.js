@@ -57,7 +57,7 @@ const LeftColumn = () => {
                 <div className="left_subcolumn">
                     <LeftTitle title="SKILLS" />
                     <div className="parts_description">
-                        <div className="line_description">JavaScript, TypeScript, PHP, ReactJs, Redux, VueJs, Material-UI, Yii, HTML, CSS, Git, Docker</div>
+                        <div className="line_description">JavaScript, TypeScript, PHP, ReactJs, Redux, VueJs, NextJS, Yii, HTML, CSS, Git, Docker</div>
                     </div>
                 </div>
                 <div className="right_subcolumn">
@@ -114,16 +114,15 @@ const RightColumn = () => {
                     My works were featured in magazines, and photography exhibitions in Europe. 
                     Despite that, further growth in photography depended too much on the subjective tastes of people 
                     and connections, and too little on applying knowledge to produce a great picture. 
-                    A software engineer friend has inspired me to apply my knowledge of science and visual arts to a 
-                    perfect fit: frontend development.
+                    So decided to apply my knowledge of science and visual arts to a perfect fit: frontend development.
                 </div>
                 <div className="description">Starting from January 2020, I have been studying a growing stack of 
                     frontend technologies every day. By August I've already taught myself enough JavaScript, React, 
                     Redux, and other libraries and tools to get my first job as a middle software engineer. 
                     Since then I have learned a lot about real world codebases and team work.
                 </div>
-                <div className="description">Despite not having a lot of experience in IT, 
-                    I have acquired a lot of desirable work qualities on my career journey:
+                <div className="description">Thanks to the variety of jobs, 
+                    I have acquired a lot of useful work qualities on my career journey:
                 </div>
                 <ul>
                     <li>coming from building construction, where mistakes may cost people lives, 
@@ -176,10 +175,31 @@ const RightColumn = () => {
                 <div className="description">Being the only frontend developer in the company, I created a 
                     frontend for the platform from scratch right up to the platform's entry to the American accelerator. 
                     The site was a single page application built with React and Redux using customized MaterialUI 
-                    components. It’s purpose was to display complex financial information so I have learned a lot 
-                    implementing the required pages and components. I have also supported internationalization, 
-                    integrated it with HTTP backend, made proposals to backend developers to make API more consistent, 
+                    components. I have also supported internationalization, integrated it with HTTP backend, 
+                    made proposals to backend developers to make API more consistent, 
                     and suggested design corrections to better comply with principles of UX/UI.
+                </div>
+
+                <div className="job_title">
+                    <div className="job_name">Software developer at "Otravo"</div>
+                    <div className="grey job_city">Amsterdam, the Netherlands</div>
+                </div>
+                <div className="grey job_date">07.2021-till now</div>
+                <div className="description">"Otravo" is a european travel organization. It owns owns a website
+                    that is an aggregator of travel packages.</div>
+                <div className="description">
+                    A few months before I joined the company, the entire front-end development team quit. Therefore, 
+                    the main focus of my work was to rewrite the site from clojure to typescript, keeping all the 
+                    business logic, which was complicated by the absence of previous developers. Among other things, 
+                    I successfully suggested improvements to the existing design, helped implement a new one, refactored 
+                    other people's code a lot, and regularly communicated with back-end developers to successfully launch 
+                    new pages of the site.
+                </div>
+                <div className="description">
+                    As the company expanded, the development staff grew. In this regard, I also trained junior developers: 
+                    I reviewed their pull requests, advised on code issues, helped with tasks and refactored the code where 
+                    necessary. I believe that teaching others is the best way to learn for yourself, so I've been happy to 
+                    help a few new developers.
                 </div>
             </div>
 
