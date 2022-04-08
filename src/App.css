@@ -12,9 +12,8 @@ html {
 .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 1.95em 0;
     align-items: center;
+    margin: 4em 10vw;
 }
 
 .header {
@@ -44,46 +43,42 @@ html {
 
 .icon_profile {
     font-size: 0.9em;
-    margin: 2em 1.7em;
+    margin: 0 1.7em;
 }
 
 .icon_circle {
     font-size: 0.37em;
     margin: 1em 1em;
 }
-  
-img {
-    height: 130px;
-    width: auto;
-    border-radius: 4%;
-    margin-left:auto;
-    margin-right: auto;
-    filter: grayscale(100%);
-}
 
 ul {
     padding-left: 3em;
+    margin-bottom: 1rem;
 }
 
 .columns {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 100%;
+    padding-top: 3%;
     justify-content: center;
 }
 
 .left_column {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    margin-top: 3%;
+    width: 40%;
     align-items: center;
 }
 
 .right_column {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 40%;
+}
+
+.main {
+    padding: 0 1.5rem
 }
 
 .section_title {
@@ -92,44 +87,26 @@ ul {
     align-items: center;
     font-size: 1.1em;
     font-weight: 600;
-}
-
-.parts_title {
     justify-content: center;
     margin-bottom: 1em;
-    margin-top: 2em;
-}
-
-.person_description {
-    display: flex;
-    color: rgb(39, 22, 1);
-    font-size: 1em;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 8%;
 }
 
 .grey {
     color: grey;
+    margin-bottom: 0.3rem;
 }
 
 .parts_description {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .line_description {
     text-align: center;
 }
 
-.main_text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2em;
-    padding-left: 1.5em;
-    border-left: solid 2px  rgba(39, 22, 1, 0.555);
-}
 
 .education_row {
     display: flex;
@@ -137,8 +114,7 @@ ul {
 }
 
 .degree {
-    display: flex;
-    margin-left: 2em;
+  color: black
 }
 
 .job_title {
@@ -147,6 +123,17 @@ ul {
     justify-content: space-between;
     align-items: flex-end;
 }
+
+.education_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    text-align: end;
+    padding-right: 1rem;
+}
+
 
 .job_city {
     font-size: 0.8em;
@@ -169,70 +156,34 @@ ul {
 }
 
 .education_list {
-    margin-bottom: 0;
+    margin: 1rem 0 3rem -1.3rem;
 }
 
-
-@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+@media only screen and (max-width: 750px) {
     html {
         font-size: 14px;
     }
-}
-  
-@media only screen and (min-width: 750px) and (max-width: 1300px) {
-    html {
-        font-size: 13px;
-    }
-}
-  
-@media only screen and (max-width: 750px) {
-    html {
-        font-size: 12px;
+    .container {
+        margin: 2rem 1vw;
     }
     .columns {
         flex-direction: column;
         width: 95%;
         align-items: center;
     }
-    .subcolumns {
-        display: flex;
-        flex-direction: row;
-    }
-    .left_subcolumn, .right_subcolumn {
-        width: 50%; 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 0 0.5em;
-    }
     .left_column, .right_column {
         width: 100%;
     }
-    .media {
-        font-size: 14px;
-    }
-    .main_text {
-        margin-left: 1em;
-    }
     .icon_profile {
         margin: 1.5em 0.7em;
+    }
+    .parts_description, .education_list {
+        margin-bottom: 1rem;
     }
 }
 
 @media print {
     html {
         font-size: 15px;
-    }
-    .columns {
-        width: 95%;
-    }
-    .left_column {
-        width: 30%;
-    }
-    .right_column {
-        width: 70%;
-    }
-    .description {
-        padding: auto;
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFan, faCircle, faUserAlt, faBriefcase, faUserGraduate } from "@fortawesome/free-solid-svg-icons";
+import { faFan, faCircle, faUserAlt, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import './App.css';
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
 
 const LeftTitle = ({ title }) => {
     return (
-        <div className="section_title parts_title">
+        <div className="section_title">
             <FontAwesomeIcon icon={faCircle} className="icon_circle"/>
             <div>{title}</div>
             <FontAwesomeIcon icon={faCircle} className="icon_circle"/>
@@ -48,25 +48,18 @@ const GeneralDescription = () => {
 const LeftColumn = () => {
     return (
         <div className="left_column">
-            <img src="ava.jpg" alt="here has to be a pic" />
             <LeftTitle title="DETAILS" />
-            <div className="parts_description media">
+            <div className="parts_description">
                 <GeneralDescription />
             </div>
-            <div className="subcolumns">
-                <div className="left_subcolumn">
-                    <LeftTitle title="SKILLS" />
-                    <div className="parts_description">
-                        <div className="line_description">JavaScript, TypeScript, PHP, ReactJs, Redux, VueJs, NextJS, Yii, HTML, CSS, Git, Docker</div>
-                    </div>
-                </div>
-                <div className="right_subcolumn">
-                    <LeftTitle title="INTERESTS" />
-                    <div className="parts_description">
-                        <div className="line_description">photography, art, quantum physics, math, cognitive science</div>
-                    </div>
-                </div>
+
+          
+
+            <LeftTitle title="INTERESTS" />
+            <div className="parts_description">
+                <div className="line_description">photography, art, quantum physics, math, cognitive science</div>
             </div>
+
         </div>
     )
 };
@@ -80,14 +73,9 @@ const education = [
 const ListOfEducation = () => {
     return (
         <ul className="education_list">
-            {education.map(([year, degree]) => {
-                return (
-                    <div className="education_row" key={year}>
-                        <li className="grey">{year}</li>
-                        <div className="degree">{degree}</div>
-                    </div>
-                )
-            })}
+            {education.map(([year, degree]) => (
+                <li key={year} className="grey">{year}, <span className='degree'>{degree}</span></li>
+            ))}
         </ul>
     )
 };
@@ -95,126 +83,12 @@ const ListOfEducation = () => {
 const RightColumn = () => {
     return (
         <div className="right_column">
-            <div className="section_title">
-                <FontAwesomeIcon icon={faUserAlt} className="icon_profile"/>
-                <div>ABOUT ME</div>
+              <LeftTitle title="EDUCATION" />
+            <div className="education_title">
+                <div>Voronezh State Agricultural University</div>
+                <div className="grey job_city">Voronezh, Russia</div>
             </div>
-
-            <div className="main_text">
-                <div>From 2011 to 2015, I worked in the area of land cadastre, cartography, and geodesy. 
-                    I was involved in digitizing maps and constructing multi-story monolithic buildings, 
-                    working on site as a geodesist. I enjoyed the work and how useful it felt to society and hoped to 
-                    make a great career there. But unfortunately, the construction industry in Russia turned out to be 
-                    heavy with corruption and sexism, so I decided to change my profession. I always enjoyed physics 
-                    and applying it to the world, so I decided to put my knowledge of optics and natural phenomena to 
-                    become a photographer.
-                </div>
-                <div className="description">I taught myself all main photography principles such as color, light, 
-                    and composition, and worked as a fashion photographer for five years until December 2019. 
-                    My works were featured in magazines, and photography exhibitions in Europe. 
-                    Despite that, further growth in photography depended too much on the subjective tastes of people 
-                    and connections, and too little on applying knowledge to produce a great picture. 
-                    So decided to apply my knowledge of science and visual arts to a perfect fit: frontend development.
-                </div>
-                <div className="description">Starting from January 2020, I have been studying a growing stack of 
-                    frontend technologies every day. By August I've already taught myself enough JavaScript, React, 
-                    Redux, and other libraries and tools to get my first job as a middle software engineer. 
-                    Since then I have learned a lot about real world codebases and team work.
-                </div>
-                <div className="description">Thanks to the variety of jobs, 
-                    I have acquired a lot of useful work qualities on my career journey:
-                </div>
-                <ul>
-                    <li>coming from building construction, where mistakes may cost people lives, 
-                        I have a high level of responsibility and discipline;</li>
-                    <li>working with individuals while being a photographer taught me how to communicate effectively, 
-                        make people comfortable, and understand their requirements, which is extremely valuable when 
-                        collaborating with team members in IT.</li>
-                </ul>
-            </div>
-
-            <div className="section_title">
-                <FontAwesomeIcon icon={faBriefcase} className="icon_profile"/>
-                <div>EMPLOYMENT HISTORY</div>
-            </div>
-
-            <div className="main_text">
-                <div className="job_title">
-                    <div className="job_name">Front end developer at "Opora" LLC</div>
-                    <div className="grey job_city">Moscow, Russia</div> 
-                </div>
-                <div className="grey job_date">09.2020-12.2020</div>
-                <div className="description">"Opora" LLC is a leader in producing and selling medical equipment in Russia.</div>
-                <div className="description">As a first job, this vacancy turned out to be a tough nut to crack. 
-                    I was supposed to work only on frontend in React, but in fact all frontend code was written in Vue.js 
-                    templates which were generated by a PHP backend <span role="img" aria-label="face">😑</span>. I had to study a lot in progress including reading 
-                    and occasionally modifying backend as well. During my time at the company, 
-                    I converted all SASS to SCSS; refactored half of the existing frontend codebase while working on 
-                    related tasks; successfully proposed to change the OS from Windows to Linux in the entire development 
-                    department; found and fixed multiple pre-existing production bugs, including one which made it 
-                    impossible to buy anything through the mobile version of the site. I also suggested to work on 
-                    technical debt and to use more consistent Agile practices, such as properly planning big tasks and 
-                    pair programming.
-                </div>
-                <div className="description">My core activities included:
-                    <ul>
-                        <li>development and maintenance front end of two company sites - one for legal entities, one for individuals;</li> 
-                        <li>helping with PHP backend;</li>
-                        <li>improving internal admin site;</li>
-                        <li>rewriting legacy code. </li> 
-                    </ul>
-                </div>
-
-                <div className="job_title">
-                    <div className="job_name">Front end developer at "SmartAn" LLC</div>
-                    <div className="grey job_city">Moscow, Russia</div>
-                </div>
-                <div className="grey job_date">01.2021-05.2021</div>
-                <div className="description">"SmartAn" LLC is the first startup company in Russia which 
-                    aggregates data for risk managers.  </div>
-                <div className="description">Being the only frontend developer in the company, I created a 
-                    frontend for the platform from scratch right up to the platform's entry to the American accelerator. 
-                    The site was a single page application built with React and Redux using customized MaterialUI 
-                    components. I have also supported internationalization, integrated it with HTTP backend, 
-                    made proposals to backend developers to make API more consistent, 
-                    and suggested design corrections to better comply with principles of UX/UI.
-                </div>
-
-                <div className="job_title">
-                    <div className="job_name">Software developer at "Otravo"</div>
-                    <div className="grey job_city">Amsterdam, the Netherlands</div>
-                </div>
-                <div className="grey job_date">07.2021-till now</div>
-                <div className="description">"Otravo" is a european travel organization. It owns a website
-                    that is an aggregator of travel packages.</div>
-                <div className="description">
-                    A few months before I joined the company, the entire front-end development team quit. Therefore, 
-                    the main focus of my work was to rewrite the site from clojure to typescript, keeping all the 
-                    business logic, which was complicated by the absence of previous developers. Among other things, 
-                    I successfully suggested improvements to the existing design, helped implement a new one, refactored 
-                    other people's code a lot, and regularly communicated with back-end developers to successfully launch 
-                    new pages of the site.
-                </div>
-                <div className="description">
-                    As the company expanded, the development staff grew. In this regard, I also trained junior developers: 
-                    I reviewed their pull requests, advised on code issues, helped with tasks and refactored the code where 
-                    necessary. I believe that teaching others is the best way to learn for yourself, so I've been happy to 
-                    help a few new developers.
-                </div>
-            </div>
-
-            <div className="section_title">
-                <FontAwesomeIcon icon={faUserGraduate} className="icon_profile"/>
-                <div>EDUCATION</div>
-            </div>
-
-            <div className="main_text">
-                <div className="job_title">
-                    <div className="job_name">Voronezh State Agricultural University</div>
-                    <div className="grey job_city">Voronezh, Russia</div>
-                </div>
-                <ListOfEducation />
-            </div>
+            <ListOfEducation />
         </div>
     )
 };
@@ -226,6 +100,86 @@ const App = () => {
             <div className="columns">
                 <LeftColumn />
                 <RightColumn />
+            </div>
+
+            <div className="section_title">
+                <FontAwesomeIcon icon={faUserAlt} className="icon_profile"/>
+                <div>ABOUT ME</div>
+            </div>
+
+            <div className="main">
+                <div>Four years in cartography and geodesy.</div>
+                <div className='description'>Five years in fashion photography</div>
+                <div className='description'>Since 2018 - deep in software development.</div>
+                <div className='description'>In January, I decided to change my career path to software development, and 
+                    till August, I learned enough to get my first job as a middle software engineer. 
+                </div>
+         
+                <div className="description">Thanks to the variety of jobs, 
+                    I have acquired a lot of useful work qualities on my career journey:
+                </div>
+                <ul>
+                    <li>coming from building construction, where mistakes may cost people lives, 
+                        I have a high level of responsibility and discipline;</li>
+                    <li>working with individuals while being a photographer taught me how to communicate effectively, 
+                        make people comfortable, and understand their requirements, which is extremely valuable when 
+                        collaborating with team members in IT.</li>
+                </ul>
+
+
+                <div className="section_title">
+                    <FontAwesomeIcon icon={faBriefcase} className="icon_profile"/>
+                    <div>EMPLOYMENT HISTORY</div>
+                </div>
+                <div className="job_title">
+                    <div className="job_name">Front end developer at "Opora" LLC</div>
+                    <div className="grey job_city">Moscow, Russia</div> 
+                </div>
+                <div className="grey job_date">09.2018-12.2020</div>
+                <div className="description">"Opora" LLC is a leader in producing and selling medical equipment in Russia.</div>
+                <div className="description">Used technologies: PHP, YII, JavaScript, VueJs</div> 
+                <ul>
+                    <li>Worked with the frontend of two company sites - one for legal entities, one for individuals;</li> 
+                    <li>Helped with PHP backend;</li>
+                    <li>Converted all SASS to SCSS</li>
+                    <li>Rewrote internal admin site;</li>
+                    <li>Rewrote big part of legacy code. </li> 
+                </ul>
+
+
+                <div className="job_title">
+                    <div className="job_name">Front end developer at "SmartAn" LLC</div>
+                    <div className="grey job_city">Moscow, Russia</div>
+                </div>
+                <div className="grey job_date">12.2020-06.2021</div>
+                <div className="description">"SmartAn" LLC is the first startup company in Russia that 
+                    aggregates data for risk managers.  </div>
+                <div className="description">Used technologies: TypeScript, ReactJs, Redux, NextJS</div> 
+                <ul>
+                    <li>Was the only frontend developer in a team.</li>
+                    <li>Created a 
+                    frontend for the platform from scratch right up to the platform's entry to the American accelerator.</li> 
+                    <li>Implemented internationalization.</li>
+                    <li>Worked on the design of all pages.</li>
+                </ul>
+
+
+                <div className="job_title">
+                    <div className="job_name">Software developer at "Otravo"</div>
+                    <div className="grey job_city">Amsterdam, the Netherlands</div>
+                </div>
+                <div className="grey job_date">07.2021-till now</div>
+                <div className="description">"Otravo" is a european travel organization. It owns a website
+                    that is an aggregator of travel packages.</div>
+                <div className="description">Used technologies: TypeScript, ReactJs, NextJS, ClojureJs</div> 
+                <ul>
+                    <li>Rewrote almost the whole front end from ClojureJs to TS.</li> 
+                    <li>Modularized components using NextJs.</li>
+                    <li>Trained junior developers.</li>
+                    <li>Refactored a lot of code.</li>
+                    <li>Regularly communicated with backend developers to successfully launch 
+                    new pages of the site. </li> 
+                </ul>
             </div>
         </div>
     );
