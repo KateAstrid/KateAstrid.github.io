@@ -116,26 +116,26 @@ const App = () => {
                     <li>since 2018 - deep in software development.</li>
                 </ul>
 
-
                 <div className="section_title education">
                     <FontAwesomeIcon icon={faBriefcase} className="icon_profile"/>
                     <div>EMPLOYMENT HISTORY</div>
                 </div>
                 <div className="job_title">
-                    <div className="job_name">Front end developer at "Opora" LLC</div>
-                    <div className="grey job_city">Moscow, Russia</div> 
+                    <div className="job_name">Software developer at "Otravo"</div>
+                    <div className="grey job_city">Amsterdam, the Netherlands</div>
                 </div>
-                <div className="grey job_date">09.2018-12.2020</div>
-                <div className="description">"Opora" LLC is a leader in producing and selling medical equipment in Russia.</div>
-                <div className="description">Used technologies: PHP, YII, JavaScript, VueJs</div> 
+                <div className="grey job_date">07.2021-till now</div>
+                <div className="description">"Otravo" is a European travel organization. It owns a website
+                    that is an aggregator of travel packages.</div>
+                <div className="description">Used technologies: TypeScript, ReactJs, NextJS, ClojureJs</div> 
                 <ul>
-                    <li>Worked with the frontend of two company sites - one for legal entities, one for individuals;</li> 
-                    <li>Helped with PHP backend.</li>
-                    <li>Converted all SASS to SCSS.</li>
-                    <li>Rewrote internal admin site.</li>
-                    <li>Rewrote big part of legacy code. </li> 
+                    <li>Rewrote almost the whole front end from ClojureJs to TS.</li> 
+                    <li>Modularized components using NextJs.</li>
+                    <li>Trained junior developers.</li>
+                    <li>Refactored a lot of code.</li>
+                    <li>Regularly communicated with backend developers to successfully launch 
+                    new pages of the site. </li> 
                 </ul>
-
 
                 <div className="job_title">
                     <div className="job_name">Front end developer at "SmartAn" LLC</div>
@@ -155,21 +155,20 @@ const App = () => {
 
 
                 <div className="job_title">
-                    <div className="job_name">Software developer at "Otravo"</div>
-                    <div className="grey job_city">Amsterdam, the Netherlands</div>
+                    <div className="job_name">Front end developer at "Opora" LLC</div>
+                    <div className="grey job_city">Moscow, Russia</div> 
                 </div>
-                <div className="grey job_date">07.2021-till now</div>
-                <div className="description">"Otravo" is a European travel organization. It owns a website
-                    that is an aggregator of travel packages.</div>
-                <div className="description">Used technologies: TypeScript, ReactJs, NextJS, ClojureJs</div> 
+                <div className="grey job_date">09.2018-12.2020</div>
+                <div className="description">"Opora" LLC is a leader in producing and selling medical equipment in Russia.</div>
+                <div className="description">Used technologies: PHP, YII, JavaScript, VueJs</div> 
                 <ul>
-                    <li>Rewrote almost the whole front end from ClojureJs to TS.</li> 
-                    <li>Modularized components using NextJs.</li>
-                    <li>Trained junior developers.</li>
-                    <li>Refactored a lot of code.</li>
-                    <li>Regularly communicated with backend developers to successfully launch 
-                    new pages of the site. </li> 
+                    <li>Worked with the frontend of two company sites - one for legal entities, one for individuals;</li> 
+                    <li>Helped with PHP backend.</li>
+                    <li>Converted all SASS to SCSS.</li>
+                    <li>Rewrote internal admin site.</li>
+                    <li>Rewrote big part of legacy code. </li> 
                 </ul>
+
             </div>
         </div>
     );
