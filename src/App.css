@@ -2,11 +2,16 @@
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
 }
-
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 html {
     background-color: rgb(255, 255, 255);
     color: rgb(39, 22, 1);
     font-size: 16px;
+   
 }
  
 .container {
@@ -14,6 +19,7 @@ html {
     flex-direction: column;
     align-items: center;
     margin: 4em 10vw;
+    max-width: 1000px;
 }
 
 .header {
@@ -88,7 +94,7 @@ ul {
     font-size: 1.1em;
     font-weight: 600;
     justify-content: center;
-    margin-bottom: 1em;
+    margin: 2rem 0 1rem 0;
 }
 
 .grey {
@@ -156,7 +162,7 @@ ul {
 }
 
 .education_list {
-    margin: 1rem 0 3rem -1.3rem;
+    margin: 1rem 0 0 -1.3rem;
 }
 
 @media only screen and (max-width: 750px) {
@@ -179,6 +185,9 @@ ul {
     }
     .parts_description, .education_list {
         margin-bottom: 1rem;
+    }
+    .section_title {
+        margin: 1rem 0 1rem 0;
     }
 }
 

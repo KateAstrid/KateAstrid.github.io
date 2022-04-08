@@ -108,22 +108,14 @@ const App = () => {
             </div>
 
             <div className="main">
-                <div>Four years in cartography and geodesy.</div>
-                <div className='description'>Five years in fashion photography</div>
-                <div className='description'>Since 2018 - deep in software development.</div>
-                <div className='description'>In January, I decided to change my career path to software development, and 
-                    till August, I learned enough to get my first job as a middle software engineer. 
+                <div className="description">Self-taught, highly motivated individual dedicated to writing clear, concise, robust code that works. 
+                    Striving to never stop learning and improving.
                 </div>
-         
-                <div className="description">Thanks to the variety of jobs, 
-                    I have acquired a lot of useful work qualities on my career journey:
-                </div>
+                <div className="description">My way:</div>
                 <ul>
-                    <li>coming from building construction, where mistakes may cost people lives, 
-                        I have a high level of responsibility and discipline;</li>
-                    <li>working with individuals while being a photographer taught me how to communicate effectively, 
-                        make people comfortable, and understand their requirements, which is extremely valuable when 
-                        collaborating with team members in IT.</li>
+                    <li>four years in cartography and geodesy;</li>
+                    <li>five years in fashion photography;</li>
+                    <li>since 2018 - deep in software development.</li>
                 </ul>
 
 
@@ -140,9 +132,9 @@ const App = () => {
                 <div className="description">Used technologies: PHP, YII, JavaScript, VueJs</div> 
                 <ul>
                     <li>Worked with the frontend of two company sites - one for legal entities, one for individuals;</li> 
-                    <li>Helped with PHP backend;</li>
-                    <li>Converted all SASS to SCSS</li>
-                    <li>Rewrote internal admin site;</li>
+                    <li>Helped with PHP backend.</li>
+                    <li>Converted all SASS to SCSS.</li>
+                    <li>Rewrote internal admin site.</li>
                     <li>Rewrote big part of legacy code. </li> 
                 </ul>
 
@@ -169,7 +161,7 @@ const App = () => {
                     <div className="grey job_city">Amsterdam, the Netherlands</div>
                 </div>
                 <div className="grey job_date">07.2021-till now</div>
-                <div className="description">"Otravo" is a european travel organization. It owns a website
+                <div className="description">"Otravo" is a European travel organization. It owns a website
                     that is an aggregator of travel packages.</div>
                 <div className="description">Used technologies: TypeScript, ReactJs, NextJS, ClojureJs</div> 
                 <ul>
