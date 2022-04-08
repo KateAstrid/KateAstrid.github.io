@@ -67,7 +67,7 @@ ul {
     flex-direction: row;
     width: 100%;
     padding-top: 3%;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .left_column {
@@ -186,6 +186,11 @@ ul {
 
 @media print {
     html {
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: auto;
+        margin: 1em 2vw;
     }
 }
