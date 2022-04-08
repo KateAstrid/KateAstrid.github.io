@@ -40,7 +40,7 @@ const GeneralDescription = () => {
                     </React.Fragment>
                 )
             })}
-            <div>GitHub: <a className="grey" href="https://github.com/KateAstrid">KateAstrid</a></div>
+            <div className='line_description'>GitHub: <a className="grey" href="https://github.com/KateAstrid">KateAstrid</a></div>
         </React.Fragment>
     )
 };
