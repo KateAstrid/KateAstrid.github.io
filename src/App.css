@@ -49,7 +49,7 @@ html {
 
 .icon_profile {
     font-size: 0.9em;
-    margin: 0 1.7em;
+    margin: 0 0.7em;
 }
 
 .icon_circle {
@@ -84,7 +84,8 @@ ul {
 }
 
 .main {
-    padding: 0 1.5rem
+    padding: 0 1.5rem;
+    margin-top: 1rem;
 }
 
 .section_title {
@@ -94,7 +95,11 @@ ul {
     font-size: 1.1em;
     font-weight: 600;
     justify-content: center;
-    margin: 2rem 0 1rem 0;
+    margin: 1rem 0;
+}
+
+.education {
+    margin-top: 2rem;
 }
 
 .grey {
@@ -106,17 +111,10 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1.5rem;
 }
 
 .line_description {
     text-align: center;
-}
-
-
-.education_row {
-    display: flex;
-    flex-direction: row;
 }
 
 .degree {
@@ -151,6 +149,7 @@ ul {
 .job_name {
     font-size: 1.1em;
     font-weight: 600;
+    margin: 0.5em 0;
 }
 
 .job_date {
@@ -180,14 +179,8 @@ ul {
     .left_column, .right_column {
         width: 100%;
     }
-    .icon_profile {
-        margin: 1.5em 0.7em;
-    }
-    .parts_description, .education_list {
-        margin-bottom: 1rem;
-    }
-    .section_title {
-        margin: 1rem 0 1rem 0;
+    .main, .education {
+        margin-top: 0;
     }
 }
 

@@ -49,14 +49,11 @@ const LeftColumn = () => {
     return (
         <div className="left_column">
             <LeftTitle title="DETAILS" />
-            <div className="parts_description">
+            <div className="description">
                 <GeneralDescription />
             </div>
-
-          
-
             <LeftTitle title="INTERESTS" />
-            <div className="parts_description">
+            <div className="description">
                 <div className="line_description">photography, art, quantum physics, math, cognitive science</div>
             </div>
 
@@ -85,7 +82,7 @@ const RightColumn = () => {
         <div className="right_column">
               <LeftTitle title="EDUCATION" />
             <div className="education_title">
-                <div>Voronezh State Agricultural University</div>
+                <div className='description'>Voronezh State Agricultural University</div>
                 <div className="grey job_city">Voronezh, Russia</div>
             </div>
             <ListOfEducation />
@@ -102,12 +99,13 @@ const App = () => {
                 <RightColumn />
             </div>
 
+           
+
+            <div className="main">
             <div className="section_title">
                 <FontAwesomeIcon icon={faUserAlt} className="icon_profile"/>
                 <div>ABOUT ME</div>
             </div>
-
-            <div className="main">
                 <div className="description">Self-taught, highly motivated individual dedicated to writing clear, concise, robust code that works. 
                     Striving to never stop learning and improving.
                 </div>
@@ -119,7 +117,7 @@ const App = () => {
                 </ul>
 
 
-                <div className="section_title">
+                <div className="section_title education">
                     <FontAwesomeIcon icon={faBriefcase} className="icon_profile"/>
                     <div>EMPLOYMENT HISTORY</div>
                 </div>
