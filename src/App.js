@@ -82,7 +82,7 @@ const RightColumn = () => {
         <div className="right_column">
               <LeftTitle title="EDUCATION" />
             <div className="education_title">
-                <div className='description'>Voronezh State Agricultural University</div>
+                <div className='description job_name'>Voronezh State Agricultural University</div>
                 <div className="grey job_city">Voronezh, Russia</div>
             </div>
             <ListOfEducation />
@@ -98,8 +98,6 @@ const App = () => {
                 <LeftColumn />
                 <RightColumn />
             </div>
-
-           
 
             <div className="main">
             <div className="section_title">
