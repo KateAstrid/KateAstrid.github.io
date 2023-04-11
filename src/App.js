@@ -204,7 +204,7 @@ const App = () => {
           <div className='job_name'>Front end developer at "Opora" LLC</div>
           <div className='grey job_city'>Moscow, Russia</div>
         </div>
-        <div className='grey job_date'>09.2018-12.2020</div>
+        <div className='grey job_date'>08.2018-12.2020</div>
         <div className='description'>
           "Opora" LLC is a leader in producing and selling medical equipment in Russia.
         </div>
