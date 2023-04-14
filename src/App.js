@@ -145,17 +145,37 @@ const App = () => {
             Implementing new features to enhance the user experience and add new functionality.
           </li>
           <li>
-            Trained Collaborating with other developers and designers to ensure that the frontend
-            was aligned with project goals and objectives.
+            Collaborating with other developers and designers to ensure that the frontend was
+            aligned with project goals and objectives.
           </li>
           <li>Testing and debugging code thoroughly to ensure it was free from bugs and errors.</li>
           <li>
             Optimizing performance through techniques such as lazy loading, code splitting, and
             caching.
           </li>
+        </ul>
+
+        <div className='job_title'>
+          <div className='job_name'>Frontend tech lead in "Lingwing" (part-time)</div>
+          <div className='grey job_city'>Tbilisi, Georgia</div>
+        </div>
+        <div className='grey job_date'>08.2022-now</div>
+        <div className='description'>
+          "Lingwing" is a language web application that allows user to study multiple languages.
+        </div>
+        <div className='description'>Used technologies: TypeScript, ReactJs, NextJS</div>
+        <ul>
+          <li>Rewriting code from Angular to React + TypeScript.</li>
+          <li>Choosing libraries and tools that are appropriate for the project.</li>
+          <li>Training and mentoring less experienced developers.</li>
+          <li>Conducting regular code reviews and providing feedback to improve code quality.</li>
           <li>
-            Maintaining documentation for the frontend code, including API documentation, user
-            guides, and release notes.
+            Working with the backend team to ensure seamless integration of front-end and back-end
+            code.
+          </li>
+          <li>
+            Working closely with project managers and stakeholders to ensure that the project meets
+            its goals and is delivered on time and on budget.
           </li>
         </ul>
 
@@ -170,13 +190,13 @@ const App = () => {
         </div>
         <div className='description'>Used technologies: TypeScript, ReactJs, NextJS, ClojureJs</div>
         <ul>
-          <li>Rewrote almost the whole front end from ClojureJs to TS.</li>
-          <li>Modularized components using NextJs.</li>
-          <li>Trained junior developers.</li>
-          <li>Refactored a lot of code.</li>
+          <li>Rewriting almost the whole front end from ClojureJs to TS.</li>
+          <li>Modularizing components using NextJs.</li>
+          <li>Training junior developers.</li>
+          <li>Refactoring legacy code.</li>
           <li>
-            Regularly communicated with backend developers to successfully launch new pages of the
-            site.{' '}
+            Regularly communicating with backend developers to successfully launch new pages of the
+            site.
           </li>
         </ul>
 
@@ -187,17 +207,16 @@ const App = () => {
         <div className='grey job_date'>12.2020-06.2021</div>
         <div className='description'>
           "SmartAn" LLC is the first startup company in Russia that aggregates data for risk
-          managers.{' '}
+          managers.
         </div>
         <div className='description'>Used technologies: TypeScript, ReactJs, Redux, NextJS</div>
         <ul>
-          <li>Was the only frontend developer in a team.</li>
           <li>
-            Created a frontend for the platform from scratch right up to the platform's entry to the
-            American accelerator.
+            Creating a frontend for the platform from scratch right up to the platform's entry to
+            the American accelerator being the only frontend developer in the team.
           </li>
-          <li>Implemented internationalization.</li>
-          <li>Worked on the design of all pages.</li>
+          <li>Implementing internationalization.</li>
+          <li>Working on the design of all pages.</li>
         </ul>
 
         <div className='job_title'>
@@ -211,13 +230,13 @@ const App = () => {
         <div className='description'>Used technologies: PHP, YII, JavaScript, VueJs</div>
         <ul>
           <li>
-            Worked with the frontend of two company sites - one for legal entities, one for
+            Working with the frontend of two company sites - one for legal entities, one for
             individuals;
           </li>
-          <li>Helped with PHP backend.</li>
-          <li>Converted all SASS to SCSS.</li>
-          <li>Rewrote internal admin site.</li>
-          <li>Rewrote big part of legacy code. </li>
+          <li>Helping with the PHP backend.</li>
+          <li>Converting all SASS to SCSS.</li>
+          <li>Rewriting an internal admin site.</li>
+          <li>Rewriting legacy code. </li>
         </ul>
       </div>
     </div>
