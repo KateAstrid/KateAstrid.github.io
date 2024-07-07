@@ -65,27 +65,26 @@ ul {
 .columns {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 95%;
     padding-top: 3%;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .left_column {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    align-items: center;
+    width: 45%;
 }
 
 .right_column {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
 }
 
 .main {
-    padding: 0 1.5rem;
     margin-top: 1rem;
+    width: 95%;
 }
 
 .section_title {
@@ -111,10 +110,6 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.line_description {
-    text-align: center;
 }
 
 .degree {
@@ -164,6 +159,12 @@ ul {
     margin: 1rem 0 0 -1.3rem;
 }
 
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 @media only screen and (max-width: 750px) {
     html {
         font-size: 14px;
@@ -178,9 +179,6 @@ ul {
     }
     .left_column, .right_column {
         width: 100%;
-    }
-    .main, .education {
-        margin-top: 0;
     }
 }
 
