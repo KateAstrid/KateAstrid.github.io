@@ -1,7 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFan, faCircle, faUserAlt, faBriefcase, faCertificate, faSchool } from '@fortawesome/free-solid-svg-icons';
+import { faFan, faCircle, faUserAlt, faBriefcase, faCertificate, faSchool, faHome, faPhone, faMailBulk } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
+import { faGithub, faLinkedin, faDev, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Header = () => {
   return (
@@ -29,45 +30,45 @@ const Contacts = () => {
   return (
     <React.Fragment>
       <div className='line_description'>
-        location:{' '}
+      <FontAwesomeIcon icon={faHome} size='20' className='contact_icon'/>
         <span className='grey'>
           Amsterdam, The Netherlands
         </span>
       </div>
       <div className='line_description'>
-        phone:{' '}
+      <FontAwesomeIcon icon={faPhone} size='20' className='contact_icon'/>
         <span className='grey'>
           +31620681510
         </span>
       </div>
       <div className='line_description'>
-        email:{' '}
+      <FontAwesomeIcon icon={faMailBulk} size='20' className='contact_icon'/>
         <span className='grey'>
           rational.astrid@gmail.com
         </span>
       </div>
       <div className='line_description'>
-        LinkedIn:{' '}
+      <FontAwesomeIcon icon={faLinkedin} size='20' className='contact_icon'/>
         <a className='grey' href='https://www.linkedin.com/in/kate-astrid/'>
-          Connect with me
+          kate-astrid
         </a>
       </div>
       <div className='line_description'>
-        GitHub:{' '}
+      <FontAwesomeIcon icon={faGithub} size='20' className='contact_icon'/>
         <a className='grey' href='https://github.com/KateAstrid'>
           KateAstrid
         </a>
       </div>
       <div className='line_description'>
-        DEV:{' '}
-        <a className='grey' href='https://www.instagram.com/rational.astrid/'>
-          @rational.astrid
+      <FontAwesomeIcon icon={faDev} size='20' className='contact_icon'/>
+        <a className='grey' href='https://dev.to/kate_astrid'>
+          kate_astrid
         </a>
       </div>
       <div className='line_description'>
-        Instagram:{' '}
-        <a className='grey' href='https://dev.to/kate_astrid'>
-          kate_astrid
+      <FontAwesomeIcon icon={faInstagram} size='20' className='contact_icon'/>
+        <a className='grey' href='https://www.instagram.com/rational.astrid/'>
+          @rational.astrid
         </a>
       </div>
     </React.Fragment>

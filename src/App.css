@@ -164,6 +164,9 @@ ul {
     flex-direction: column;
     align-items: flex-start;
 }
+.contact_icon {
+    margin-right: 0.5em;
+}
 
 @media only screen and (max-width: 750px) {
     html {
