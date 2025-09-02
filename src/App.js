@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFan, faCircle, faUserAlt, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faFan, faCircle, faUserAlt, faBriefcase, faHouseUser, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faDev, faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
 
 const Header = () => {
@@ -14,68 +15,61 @@ const Header = () => {
   );
 };
 
-const LeftTitle = ({ title }) => {
+const GeneralDescription = () => {
   return (
-    <div className='section_title'>
-      <FontAwesomeIcon icon={faCircle} className='icon_circle' />
-      <div>{title}</div>
-      <FontAwesomeIcon icon={faCircle} className='icon_circle' />
+    <div className='general_description'>
+      <div className='line_description'>
+        <FontAwesomeIcon icon={faHouseUser} style={{ marginRight: '8px' }} />
+        Amsterdam, The Netherlands
+      </div>
+      <div className='line_description'>
+        <FontAwesomeIcon icon={faPhone} style={{ marginRight: '8px' }} />
+        +31620681510
+      </div>
+      <div className='line_description'>
+        <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: '8px' }} />
+        rational.astrid@gmail.com
+      </div>
+      <div className='line_description'>
+        <FontAwesomeIcon icon={faLinkedin} style={{ marginRight: '8px' }} />
+        <a href="https://linkedin.com/in/kate-astrid" className='grey'>kate-astrid</a>
+      </div>
+      <div className='line_description'>
+        <FontAwesomeIcon icon={faGithub} style={{ marginRight: '8px' }} />
+        <a href="https://github.com/KateAstrid" className='grey'>KateAstrid</a>
+      </div>
+      <div className='line_description'>
+        <FontAwesomeIcon icon={faDev} style={{ marginRight: '8px' }} />
+        <a href="https://dev.to/kate_astrid" className='grey'>kate_astrid</a>
+      </div>
+      <div className='line_description'>
+        <FontAwesomeIcon icon={faInstagram} style={{ marginRight: '8px' }} />
+        <a href="https://instagram.com/rational.astrid" className='grey'>@rational.astrid</a>
+      </div>
     </div>
   );
 };
 
-const generalDescription = [
-  'Amsterdam, The Netherlands',
-  'rational.astrid@gmail.com',
-  '+31620681510'
-];
-
-const GeneralDescription = () => {
+const BasicInfo = () => {
   return (
-    <React.Fragment>
-      {generalDescription.map(element => {
-        return (
-          <React.Fragment key={element}>
-            <div className='line_description'>{element}</div>
-          </React.Fragment>
-        );
-      })}
-      <div className='line_description'>
-        GitHub:{' '}
-        <a className='grey' href='https://github.com/KateAstrid'>
-          KateAstrid
-        </a>
+    <div className='basic_info'>
+      <div className='subtitle'>
+        • DETAILS •
       </div>
-    </React.Fragment>
-  );
-};
-
-const LeftColumn = () => {
-  return (
-    <div className='left_column'>
-      <LeftTitle title='DETAILS' />
-      <div className='description'>
         <GeneralDescription />
-      </div>
-      <LeftTitle title='INTERESTS' />
-      <div className='description'>
-        <div className='line_description'>
-          photography, art, quantum physics, math, cognitive science
-        </div>
-      </div>
     </div>
   );
 };
 
 const education = [
   ['2010', 'Bachelor of Technical Translation'],
-  ['2011', 'Bachelor of Land Management and Cadastres'],
-  ['2013', 'Master of Land Management and Cadastres']
+  ['2011', 'Bachelor of Land Management and Cadasters'],
+  ['2013', 'Master of Land Management and Cadasters']
 ];
 
 const ListOfEducation = () => {
   return (
-    <ul className='education_list'>
+    <ul>
       {education.map(([year, degree]) => (
         <li key={year} className='grey'>
           {year}, <span className='degree'>{degree}</span>
@@ -85,15 +79,16 @@ const ListOfEducation = () => {
   );
 };
 
-const RightColumn = () => {
+const Interests = () => {
   return (
-    <div className='right_column'>
-      <LeftTitle title='EDUCATION' />
-      <div className='education_title'>
-        <div className='description job_name'>Voronezh State Agricultural University</div>
-        <div className='grey job_city'>Voronezh, Russia</div>
+    <div className='interests'>
+      <div className='subtitle'>
+        • INTERESTS •
       </div>
-      <ListOfEducation />
+        <div className='line_description'>
+          photography, art, quantum physics,<br />
+          math, cognitive science
+        </div>
     </div>
   );
 };
@@ -103,8 +98,8 @@ const App = () => {
     <div className='container'>
       <Header />
       <div className='columns'>
-        <LeftColumn />
-        <RightColumn />
+        <BasicInfo />
+        <Interests />
       </div>
 
       <div className='main'>
@@ -113,12 +108,11 @@ const App = () => {
           <div>ABOUT ME</div>
         </div>
         <div className='description'>
-          Self-taught, highly motivated individual dedicated to writing clear, concise, robust code
-          that works. Striving to never stop learning and improving.
+          Motivated, dedicated, and always asking "why".
         </div>
-        <div className='description'>My way:</div>
+        <div className='description'>My path:</div>
         <ul>
-          <li>four years in cartography and geodesy;</li>
+          <li>five years in cartography and geodesy;</li>
           <li>five years in fashion photography;</li>
           <li>since 2018 - deep in software development.</li>
         </ul>
@@ -128,8 +122,53 @@ const App = () => {
           <div>EMPLOYMENT HISTORY</div>
         </div>
         <div className='job_title'>
+          <div className='job_name'>Software engineer in "epilot GmbH"</div>
+          <div className='grey job_city'>Cologne, Germany</div>
+        </div>
+        <div className='grey job_date'>05.2023-present</div>
+        <div className='description'>
+          The cloud platform for utilities, grid operators and solution providers.
+          Supports the energy transition, optimizes and scales sales, service, grid and
+          implementation processes.
+        </div>
+        <div className='description'>Used technologies: TypeScript, ReactJs, AWS, Playwright, Jest</div>
+        <ul>
+          <li>
+            Crafting scalable front-end solutions that improved system flexibility
+            and reliability.
+          </li>
+          <li>
+            Leading the development of UI components, ensuring a consistent user
+            experience and enhancing performance.
+          </li>
+          <li>
+            Building no-code forms for effective data handling, improving user
+            interaction and accuracy.
+          </li>
+          <li>
+            Implementing end-to-end testing to ensure the reliability of
+            applications, cutting down on issues after launch.
+          </li>
+          <li>
+            Aiding in managing serverless backend solutions on AWS, enhancing system
+            scalability and independence of maintenance.
+          </li>
+          <li>
+            Streamlining package management in a monorepo setup, boosting build
+            efficiency, and simplifying updates.
+          </li>
+          <li>
+            Integrating CSS modules to unify styling approaches, enhancing both
+            performance and developer ease of use.
+          </li>
+          <li>
+            Working closely with UX designers, product managers, and backend
+            developers to ensure seamless integration of front-end and back-end
+          </li>
+        </ul>
+        <div className='job_title'>
           <div className='job_name'>Software engineer in "Superside"</div>
-          <div className='grey job_city'>Wilmington, Delaware, USA</div>
+          <div className='grey job_city'>Wilmington, USA</div>
         </div>
         <div className='grey job_date'>11.2022-05.2023</div>
         <div className='description'>
@@ -139,19 +178,20 @@ const App = () => {
         <div className='description'>Used technologies: TypeScript, ReactJs, ReactQuery, Jest</div>
         <ul>
           <li>
-            Refactoring existing code to improve maintainability and adherence to best practices.
+            Enhancing user experience and functionality by implementing new front-end features.
           </li>
           <li>
-            Implementing new features to enhance the user experience and add new functionality.
+            Improving code maintainability and adhering to best practices by refactoring the
+            existing codebase.
           </li>
           <li>
-            Collaborating with other developers and designers to ensure that the frontend was
-            aligned with project goals and objectives.
+            Working collaboratively with developers and designers to align front-end development
+            with project goals and objectives.
           </li>
-          <li>Testing and debugging code thoroughly to ensure it was free from bugs and errors.</li>
+          <li>Ensuring bug-free code through meticulous testing and debugging.</li>
           <li>
-            Optimizing performance through techniques such as lazy loading, code splitting, and
-            caching.
+            Optimizing website performance via various techniques such as lazy loading, code
+            splitting, and caching.
           </li>
         </ul>
 
@@ -165,23 +205,35 @@ const App = () => {
         </div>
         <div className='description'>Used technologies: TypeScript, ReactJs, NextJS</div>
         <ul>
-          <li>Rewriting code from Angular to React + TypeScript.</li>
-          <li>Choosing libraries and tools that are appropriate for the project.</li>
-          <li>Training and mentoring less experienced developers.</li>
-          <li>Conducting regular code reviews and providing feedback to improve code quality.</li>
           <li>
-            Working with the backend team to ensure seamless integration of front-end and back-end
-            code.
+            Transforming LingWing's frontend by efficiently migrating Angular code to React +
+            TypeScript.
           </li>
           <li>
-            Working closely with project managers and stakeholders to ensure that the project meets
-            its goals and is delivered on time and on budget.
+            Analyzing and selecting appropriate libraries and tools for each project, boosting
+            development efficiency and quality.
+          </li>
+          <li>
+            Mentoring junior developers and delivered training sessions, upskilling the team and
+            fostering a culture of continuous learning.
+          </li>
+          <li>
+            Ensuring high-quality standards by conducting regular code reviews, providing
+            constructive feedback, and implementing best practices.
+          </li>
+          <li>
+            Fostering seamless collaboration with backend developers, resulting in the successful
+            integration of front-end and back-end solutions.
+          </li>
+          <li>
+            Collaborating with project managers and stakeholders, aligning all parties towards
+            common goals and timely delivery within budget constraints.
           </li>
         </ul>
 
         <div className='job_title'>
           <div className='job_name'>Software developer at "Otravo"</div>
-          <div className='grey job_city'>Amsterdam, the Netherlands</div>
+          <div className='grey job_city'>Amsterdam, Netherlands</div>
         </div>
         <div className='grey job_date'>07.2021-11.2022</div>
         <div className='description'>
@@ -190,13 +242,20 @@ const App = () => {
         </div>
         <div className='description'>Used technologies: TypeScript, ReactJs, NextJS, ClojureJs</div>
         <ul>
-          <li>Rewriting almost the whole front end from ClojureJs to TS.</li>
-          <li>Modularizing components using NextJs.</li>
-          <li>Training junior developers.</li>
-          <li>Refactoring legacy code.</li>
           <li>
-            Regularly communicating with backend developers to successfully launch new pages of the
-            site.
+            Upgrading the front-end architecture from ClojureJs to TS, resulting in improved
+            performance and user experience.
+          </li>
+          <li>
+            Mentoring and training junior developers, promoting growth, and enabling successful
+            project delivery.
+          </li>
+          <li>
+            Implementing modularized components using NextJS, increasing development efficiency.
+          </li>
+          <li>
+            Collaborating seamlessly with backend developers, contributing to launching new site
+            pages on schedule.
           </li>
         </ul>
 
@@ -212,11 +271,17 @@ const App = () => {
         <div className='description'>Used technologies: TypeScript, ReactJs, Redux, NextJS</div>
         <ul>
           <li>
-            Creating a frontend for the platform from scratch right up to the platform's entry to
-            the American accelerator being the only frontend developer in the team.
+            Developing the frontend of Smartan's platform from scratch, leading to its successful
+            entry into an American accelerator as the sole frontend developer on the team.
           </li>
-          <li>Implementing internationalization.</li>
-          <li>Working on the design of all pages.</li>
+          <li>
+            Implementing internationalization features to enhance the user experience for a global
+            audience.
+          </li>
+          <li>
+            Collaborating with stakeholders to design and improve all pages, resulting in a visually
+            appealing and user-friendly platform.
+          </li>
         </ul>
 
         <div className='job_title'>
@@ -230,14 +295,57 @@ const App = () => {
         <div className='description'>Used technologies: PHP, YII, JavaScript, VueJs</div>
         <ul>
           <li>
-            Working with the frontend of two company sites - one for legal entities, one for
-            individuals;
+            Developing and maintaining frontend for two websites, serving both legal entities and
+            individuals.
           </li>
-          <li>Helping with the PHP backend.</li>
-          <li>Converting all SASS to SCSS.</li>
-          <li>Rewriting an internal admin site.</li>
-          <li>Rewriting legacy code. </li>
+          <li>
+            Collaborating with the PHP backend team to optimize website performance and user
+            experience.
+          </li>
+          <li>Streamlining the SCSS conversion process for improved workflow efficiency.</li>
+          <li>
+            Revamping the internal admin site, leading to increased productivity and streamlined
+            processes.
+          </li>
+          <li>Modernizing outdated codebase through successful legacy code rewrite.</li>
         </ul>
+
+        <div className='section_title education'>
+          <FontAwesomeIcon icon={faHouseUser} className='icon_profile' />
+          <div>EDUCATION</div>
+        </div>
+        <div className='education_title'>
+          <div className='description job_name'>Voronezh State Agricultural University</div>
+          <div className='grey job_city'>Voronezh, Russia</div>
+        </div>
+        <ListOfEducation />
+
+        <div className='section_title education'>
+          <FontAwesomeIcon icon={faCircle} className='icon_profile' />
+          <div>CERTIFICATES</div>
+        </div>
+        <div className='description'>
+          <div className='education_title'>
+          <div className='description job_name'>AWS Cloud Quest: Serverless Developer</div>
+            <span className='grey job_city'>Issued Mar 2024</span>
+          </div>
+          <a href="https://www.credly.com/badges/e81cc81a-6033-4526-ac70-c0a0f9fd5a76/linked_in_profile" className='grey'>show credentials</a>
+          <div className='education_title'>
+            <div className='description job_name'>AWS Cloud Quest: Solutions Architect</div>
+            <span className='grey job_city'>Issued Feb 2024</span>
+          </div>
+          <a href="https://www.credly.com/badges/8ec27ea7-3fd9-446f-96b6-a841355f9d1d/linked_in_profile" className='grey'>show credentials</a>
+          <div className='education_title'>
+            <div className='description job_name'>AWS Cloud Quest: Cloud Practitioner</div>
+            <span className='grey job_city'>Issued Dec 2023</span>     
+          </div>
+          <a href="https://www.credly.com/badges/5381a9b1-1029-4747-a3f2-361002492bfe/linked_in_profile" className='grey'>show credentials</a>
+          <div className='education_title'>
+            <div className='description job_name'>Datadog 101: Developer</div>
+            <span className='grey job_city'>Issued Feb 2024</span>         
+          </div>
+          <a href="https://learn.datadoghq.com/certificates/mdj4xmnwcy" className='grey'>show credentials</a>
+        </div>
       </div>
     </div>
   );

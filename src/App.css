@@ -67,20 +67,27 @@ ul {
     flex-direction: row;
     width: 100%;
     padding-top: 3%;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.left_column {
+.basic_info {
     display: flex;
     flex-direction: column;
     width: 40%;
     align-items: center;
 }
 
-.right_column {
+.interests {
     display: flex;
     flex-direction: column;
     width: 40%;
+    align-items: center;
+}
+
+.subtitle {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .main {
@@ -130,7 +137,6 @@ ul {
 
 .education_title {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
@@ -156,14 +162,6 @@ ul {
     font-size: 0.9em;
 }
 
-.description {
-    margin: 0.5em 0;
-}
-
-.education_list {
-    margin: 1rem 0 0 -1.3rem;
-}
-
 @media only screen and (max-width: 750px) {
     html {
         font-size: 14px;
@@ -176,7 +174,7 @@ ul {
         width: 95%;
         align-items: center;
     }
-    .left_column, .right_column {
+    .basic_info, .interests {
         width: 100%;
     }
     .main, .education {
@@ -193,4 +191,10 @@ ul {
         max-width: auto;
         margin: 1em 2vw;
     }
+}
+
+.general_description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
