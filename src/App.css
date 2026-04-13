@@ -59,14 +59,15 @@ html {
 
 ul {
     padding-left: 3em;
-    margin-bottom: 1rem;
+    margin-bottom: 0.55rem;
+    margin-top: 0.15rem;
 }
 
 .columns {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding-top: 3%;
+    padding-top: 2%;
     justify-content: space-between;
 }
 
@@ -87,12 +88,26 @@ ul {
 .subtitle {
     text-align: center;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.65rem;
 }
 
 .main {
     padding: 0 1.5rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+}
+
+.main > .description {
+    margin-bottom: 0.45rem;
+}
+
+.publications_groups .publications_subheading {
+    font-weight: 600;
+    margin-top: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+.publications_groups > .publications_subheading:first-child {
+    margin-top: 0;
 }
 
 .section_title {
@@ -102,16 +117,16 @@ ul {
     font-size: 1.1em;
     font-weight: 600;
     justify-content: center;
-    margin: 1rem 0;
+    margin: 0.65rem 0;
 }
 
 .education {
-    margin-top: 2rem;
+    margin-top: 1.25rem;
 }
 
 .grey {
     color: grey;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.15rem;
 }
 
 .parts_description {
@@ -133,6 +148,12 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.job_title .job_name {
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .education_title {
@@ -148,18 +169,19 @@ ul {
 .job_city {
     font-size: 0.8em;
     text-align: end;
-    width: 12em;
-    min-width: 12em;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .job_name {
     font-size: 1.1em;
     font-weight: 600;
-    margin: 0.5em 0;
+    margin: 0.3em 0 0.2em;
 }
 
 .job_date {
     font-size: 0.9em;
+    margin-bottom: 0.15rem;
 }
 
 @media only screen and (max-width: 750px) {
