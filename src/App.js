@@ -87,7 +87,8 @@ const publicationSections = [
     heading: 'Engineering & Developer Experience',
     items: [
       ['From Chaos to Clarity: Fixing Our Monorepo', 'https://dev.to/epilot/from-chaos-to-clarity-fixing-our-monorepo-2bih'],
-      ['How to Maintain the Performance of a React Application on a Daily Basis', 'https://dev.to/epilot/how-to-maintain-the-performance-of-a-react-application-on-a-daily-basis-304k']
+      ['How to Maintain the Performance of a React Application on a Daily Basis', 'https://dev.to/epilot/how-to-maintain-the-performance-of-a-react-application-on-a-daily-basis-304k'],
+      ['What To Expect When You Join Epilot GmbH', 'https://dev.to/epilot/what-to-expect-when-you-join-epilot-1hc1']
     ]
   },
   {
@@ -114,7 +115,7 @@ const education = [
 ];
 
 const ListOfEducation = () => (
-  <ul>
+  <ul className="education_list">
     {education.map(([year, degree]) => (
       <li key={year} className="grey">
         {year}, <span className="degree">{degree}</span>
@@ -134,16 +135,25 @@ const Interests = () => (
   </div>
 );
 
+const technologiesLine =
+  'TypeScript, ReactJs, NextJS, Vite, Vitest, Jest, Playwright, ReactQuery, Redux, AWS';
+
+const TechStack = () => (
+  <div className="interests">
+    <div className="subtitle">• TECHNOLOGIES •</div>
+    <div className="line_description">{technologiesLine}</div>
+  </div>
+);
+
 const jobs = [
   {
     key: 'cogram',
     name: 'Senior Product Engineer at "Cogram"',
     city: 'Berlin, Germany',
-    date: '12.2025-present · 5 mos',
+    date: 'Dec 2025 - Present · 5 mos',
     intros: [
       "Founded in 2021, Cogram is the leading AI platform for architects, engineers, and builders. We're a deeply technical, focused team. We iterate quickly and work closely with customers—with a sharp eye for real problems and the discipline to solve them."
     ],
-    tech: null,
     bullets: [
       'Built and iterated on product features in a small, highly technical team, with a strong focus on clarity and simplicity.',
       'Worked across the entire stack, contributing to both product direction and technical implementation.',
@@ -155,11 +165,10 @@ const jobs = [
     key: 'epilot',
     name: 'Software engineer in "epilot GmbH"',
     city: 'Cologne, Germany',
-    date: '05.2023-11.2025 · 2 yrs 6 mos',
+    date: 'May 2023 - Nov 2025 · 2 yrs 7 mos',
     intros: [
       'The cloud platform for utilities, grid operators and solution providers. Supports the energy transition, optimizes and scales sales, service, grid and implementation processes.'
     ],
-    tech: 'Used technologies: TypeScript, ReactJs, Vite, Vitest, Playwright, AWS, CSS modules',
     bullets: [
       'Led the infrastructural transformation of one of our important front-end repositories by changing build tools and the monorepo setup, helping teams deliver faster (switched from Craco, tsup, tsdx, and tsx to Vite).',
       'Led a multi-month effort to remove MUI and migrate to a custom styling system based on design tokens and lightweight primitives, significantly reducing bundle size and improving performance',
@@ -172,11 +181,10 @@ const jobs = [
     key: 'superside',
     name: 'Software engineer in "Superside"',
     city: 'Wilmington, USA',
-    date: '11.2022-05.2023 · 6 mos',
+    date: 'Nov 2022 - May 2023 · 6 mos',
     intros: [
       '"Superside" is an American leading Creative-as-a-Service (CaaS) company that helps brands get great design and creative done at scale.'
     ],
-    tech: 'Used technologies: TypeScript, ReactJs, ReactQuery, Jest',
     bullets: [
       'Improved frontend performance and maintainability through refactoring and modern patterns.',
       'Worked closely with design and backend teams to deliver user-facing features.'
@@ -190,7 +198,6 @@ const jobs = [
     intros: [
       '"Lingwing" is a language web application that allows user to study multiple languages.'
     ],
-    tech: 'Used technologies: TypeScript, ReactJs, NextJS',
     bullets: [
       'Analyzed and selected appropriate libraries and tools for each project to speed up development and improve user experience.',
       'Mentored junior developers and delivered training sessions, upskilling the team and fostering a culture of continuous learning.',
@@ -200,11 +207,10 @@ const jobs = [
     key: 'otravo',
     name: 'Software developer at "Otravo"',
     city: 'Amsterdam, The Netherlands',
-    date: '07.2021-11.2022 · 1 yr 4 mos',
+    date: 'Jul 2021 - Nov 2022 · 1 yr 4 mos',
     intros: [
       '"Otravo" is a European travel organization. It owns a website that is an aggregator of travel packages.'
     ],
-    tech: 'Used technologies: TypeScript, ReactJs, NextJS, ClojureJs',
     bullets: [
       'Upgraded the front-end architecture from ClojureJs to TS, resulting in improved performance and user experience.',
       'Mentored junior developers, helped them grow, and enabled successful project delivery.',
@@ -214,11 +220,10 @@ const jobs = [
     key: 'smartan',
     name: 'Front end developer at "SmartAn" LLC',
     city: 'Moscow, Russia',
-    date: '12.2020-06.2021 · 7 mos',
+    date: 'Dec 2020 - Jun 2021 · 7 mos',
     intros: [
       '"SmartAn" LLC is the first startup company in Russia that aggregates data for risk managers.'
     ],
-    tech: 'Used technologies: TypeScript, ReactJs, Redux, NextJS',
     bullets: [
       "Developed the frontend of Smartan's platform from scratch, leading to its successful entry into an American accelerator as the sole frontend developer on the team.",
       'Collaborated with stakeholders to design and improve all pages, resulting in a visually appealing and user-friendly platform.'
@@ -228,9 +233,8 @@ const jobs = [
     key: 'opora',
     name: 'Front end developer at "Opora" LLC',
     city: 'Moscow, Russia',
-    date: '08.2018-12.2020 · 2 yrs 4 mos',
+    date: 'Aug 2018 - Dec 2020 · 2 yrs 4 mos',
     intros: ['"Opora" LLC is a leader in producing and selling medical equipment in Russia.'],
-    tech: 'Used technologies: PHP, YII, JavaScript, VueJs',
     bullets: [
       'Developed and maintained frontend for two websites, serving both legal entities and individuals.',
       'Collaborated with the PHP backend team to optimize website performance and user experience.',
@@ -274,7 +278,6 @@ const JobHistory = () =>
           {text}
         </div>
       ))}
-      {job.tech ? <div className="description">{job.tech}</div> : null}
       {job.bullets.length > 0 ? (
         <ul>
           {job.bullets.map((text, i) => (
@@ -290,7 +293,10 @@ const App = () => (
     <Header />
     <div className="columns">
       <BasicInfo />
-      <Interests />
+      <div className="column_sidebar">
+        <Interests />
+        <TechStack />
+      </div>
     </div>
 
     <div className="main">
@@ -298,14 +304,17 @@ const App = () => (
         ABOUT ME
       </SectionHeader>
       <div className="description">Motivated, curious, and always asking &quot;why&quot;.</div>
+      <br />
       <div className="description">
         I started in cartography and geodesy, moved into fashion photography, and I&apos;ve worked in
         software development since 2018.
       </div>
+      <br />
       <div className="description">
         Across all of these, one thing stayed constant: breaking down complex systems and making them
         easier to understand.
       </div>
+      <br />
       <div className="description">
         Today, I&apos;m particularly interested in improving developer experience, simplifying technical
         concepts, and helping others navigate complex systems.
@@ -351,14 +360,14 @@ const App = () => (
       <SectionHeader icon={faHandshake} education>
         VOLUNTEERING
       </SectionHeader>
-      <div className="job_title">
+      <div className="job_title volunteer_role">
         <ExternalLink
           href="https://adplist.org/mentors/kate-astrid"
           className="description job_name grey"
         >
           Mentor at ADPList
         </ExternalLink>
-        <div className="grey job_city">2023–present</div>
+        <div className="grey job_city">Jan 2023 - Present</div>
       </div>
       <div className="description">
         Mentoring people in web development and personal growth, helping them build careers in tech

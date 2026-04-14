@@ -59,15 +59,14 @@ html {
 
 ul {
     padding-left: 3em;
-    margin-bottom: 0.55rem;
-    margin-top: 0.15rem;
+    margin-bottom: 1rem;
 }
 
 .columns {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding-top: 2%;
+    padding-top: 3%;
     justify-content: space-between;
 }
 
@@ -78,32 +77,36 @@ ul {
     align-items: center;
 }
 
+.column_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    gap: 0.65rem;
+}
+
 .interests {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 100%;
     align-items: center;
 }
 
 .subtitle {
     text-align: center;
     font-weight: bold;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.7rem;
 }
 
 .main {
     padding: 0 1.5rem;
-    margin-top: 0.5rem;
-}
-
-.main > .description {
-    margin-bottom: 0.45rem;
+    margin-top: 1rem;
 }
 
 .publications_groups .publications_subheading {
     font-weight: 600;
-    margin-top: 0.85rem;
-    margin-bottom: 0.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.35rem;
 }
 
 .publications_groups > .publications_subheading:first-child {
@@ -117,16 +120,16 @@ ul {
     font-size: 1.1em;
     font-weight: 600;
     justify-content: center;
-    margin: 0.65rem 0;
+    margin: 1rem 0;
 }
 
 .education {
-    margin-top: 1.25rem;
+    margin-top: 2rem;
 }
 
 .grey {
     color: grey;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.3rem;
 }
 
 .parts_description {
@@ -147,8 +150,12 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     gap: 0.75rem;
+}
+
+.job_title.volunteer_role {
+    margin-bottom: 0.65rem;
 }
 
 .job_title .job_name {
@@ -159,10 +166,21 @@ ul {
 .education_title {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
     text-align: end;
     padding-right: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.education_title .job_name {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul.education_list {
+    padding-left: 1.15rem;
+    margin-top: 0.35rem;
 }
 
 
@@ -176,12 +194,12 @@ ul {
 .job_name {
     font-size: 1.1em;
     font-weight: 600;
-    margin: 0.3em 0 0.2em;
+    margin: 0.28em 0;
 }
 
 .job_date {
     font-size: 0.9em;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.65rem;
 }
 
 @media only screen and (max-width: 750px) {
@@ -196,7 +214,8 @@ ul {
         width: 95%;
         align-items: center;
     }
-    .basic_info, .interests {
+    .basic_info,
+    .column_sidebar {
         width: 100%;
     }
     .main, .education {
